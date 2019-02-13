@@ -29,11 +29,5 @@ dependencies {
 
 }
 
-configure(subprojects - [project(':child')]) {
-    dependencies {
-        compile(':root')
-        testImplementation project(path: ':root', configuration: 'testElements')
-    }
-}
 // Define the main class for the application
 mainClassName = 'root.App'
